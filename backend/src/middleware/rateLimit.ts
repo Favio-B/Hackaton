@@ -6,7 +6,7 @@ export const createRateLimit = (windowMs: number, max: number) => {
     max,
     message: {
       error: {
-        message: 'Too many requests from this IP, please try again later.',
+        message: 'Demasiadas solicitudes desde esta IP, intenta de nuevo más tarde.',
         status: 429
       }
     },

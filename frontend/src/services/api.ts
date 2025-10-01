@@ -37,7 +37,7 @@ class ApiClient {
 
       // Retry on 5xx errors
       if (response.status >= 500 && retryCount < this.maxRetries) {
-        console.warn(`Server error ${response.status}, retrying... (${retryCount + 1}/${this.maxRetries})`);
+        console.warn(`Error del servidor ${response.status}, reintentando... (${retryCount + 1}/${this.maxRetries})`);
         await new Promise(resolve => setTimeout(resolve, 1000 * (retryCount + 1)));
         return this.fetchWithRetry(url, options, retryCount + 1);
       }
@@ -47,12 +47,12 @@ class ApiClient {
       clearTimeout(timeoutId);
       
       if (error instanceof Error && error.name === 'AbortError') {
-        throw new Error('Request timeout');
+        throw new Error('Tiempo de espera agotado');
       }
       
       // Retry on network errors
       if (retryCount < this.maxRetries) {
-        console.warn(`Network error, retrying... (${retryCount + 1}/${this.maxRetries})`);
+        console.warn(`Error de red, reintentando... (${retryCount + 1}/${this.maxRetries})`);
         await new Promise(resolve => setTimeout(resolve, 1000 * (retryCount + 1)));
         return this.fetchWithRetry(url, options, retryCount + 1);
       }
@@ -98,7 +98,7 @@ class ApiClient {
     } catch (error) {
       return {
         error: {
-          message: error instanceof Error ? error.message : 'Network error',
+          message: error instanceof Error ? error.message : 'Error de red',
           status: 0,
         },
       };
@@ -125,10 +125,27 @@ class ApiClient {
     return this.request('/datasets');
   }
 
+  async getDataset(id: string) {
+    return this.request(`/datasets/${id}`);
+  }
+
   async createDataset(name: string, description: string, tags: string[]) {
     return this.request('/datasets', {
       method: 'POST',
       body: JSON.stringify({ name, description, tags }),
+    });
+  }
+
+  async updateDataset(id: string, name: string, description: string, tags: string[]) {
+    return this.request(`/datasets/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify({ name, description, tags }),
+    });
+  }
+
+  async deleteDataset(id: string) {
+    return this.request(`/datasets/${id}`, {
+      method: 'DELETE',
     });
   }
 

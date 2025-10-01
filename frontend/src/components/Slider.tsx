@@ -33,10 +33,9 @@ const Slider: React.FC = () => {
               <p className="lead mb-4">
                 Descubre patrones ocultos en tus datos con nuestras herramientas de machine learning
               </p>
-              <button className="btn btn-primary btn-lg">
-                <i className="bi bi-play-circle me-2"></i>
-                Comenzar Análisis
-              </button>
+              <p className="lead">
+                Herramientas avanzadas de machine learning para descubrir patrones ocultos en tus datos
+              </p>
             </div>
           </div>
         </div>
@@ -51,10 +50,9 @@ const Slider: React.FC = () => {
               <p className="lead mb-4">
                 Organiza, categoriza y comparte tus datasets de manera eficiente
               </p>
-              <button className="btn btn-primary btn-lg">
-                <i className="bi bi-plus-circle me-2"></i>
-                Crear Dataset
-              </button>
+              <p className="lead">
+                Organiza y categoriza tus datos de manera eficiente para un mejor análisis
+              </p>
             </div>
           </div>
         </div>
@@ -69,10 +67,9 @@ const Slider: React.FC = () => {
               <p className="lead mb-4">
                 Tus datos están protegidos con los más altos estándares de seguridad
               </p>
-              <button className="btn btn-primary btn-lg">
-                <i className="bi bi-lock me-2"></i>
-                Conocer Más
-              </button>
+              <p className="lead">
+                Protección de datos con los más altos estándares de seguridad y privacidad
+              </p>
             </div>
           </div>
         </div>

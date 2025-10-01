@@ -6,18 +6,18 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <h5>Data Science Platform</h5>
+            <h5>Plataforma Analisis de datos</h5>
             <p className="mb-0">
-              Una plataforma moderna para el análisis y gestión de datos científicos.
+              Una plataforma moderna para el análisis y gestión de datos.
             </p>
           </div>
           <div className="col-md-6 text-md-end">
             <p className="mb-0">
               <i className="bi bi-code-slash me-1"></i>
-              Desarrollado con React + TypeScript + Node.js
+              Desarrollado por Favio Bernal 
             </p>
             <small className="text-muted">
-              © 2024 Data Science Platform. Todos los derechos reservados.
+              © 2025 Plataforma de Análisis de Datos.
             </small>
           </div>
         </div>

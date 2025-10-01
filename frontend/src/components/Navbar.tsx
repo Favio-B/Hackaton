@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
       <div className="container">
         <Link className="navbar-brand fw-bold" to="/">
           <i className="bi bi-graph-up me-2"></i>
-          Data Science Platform
+          Plataforma Analisis de datos
         </Link>
         
         <button
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/">
                 <i className="bi bi-house me-1"></i>
-                Home
+                Inicio
               </Link>
             </li>
             {token && (
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                   onClick={handleLogout}
                 >
                   <i className="bi bi-box-arrow-right me-1"></i>
-                  Logout
+                  Cerrar sesión
                 </button>
               </li>
             ) : (
