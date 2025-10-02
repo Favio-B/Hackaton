@@ -1,8 +1,8 @@
-# Data Science Platform
+# Plataforma Analisis de Datos 
 
 Una plataforma web moderna para Ciencia e Ingeniería de Datos construida con React, TypeScript, Node.js y Express.
 
-## 🚀 Características
+##  Características
 
 - **Frontend**: React + TypeScript + Vite
 - **Backend**: Node.js + Express + TypeScript
@@ -12,12 +12,7 @@ Una plataforma web moderna para Ciencia e Ingeniería de Datos construida con Re
 - **Manejo de Errores**: Try/catch, reintentos automáticos y timeouts
 - **Protección de Rutas**: Rutas privadas con verificación de tokens
 
-## 📋 Requisitos Previos
-
-- Node.js (versión 16 o superior)
-- npm o yarn
-
-## 🛠️ Instalación y Configuración
+## Instalación y Configuración
 
 ### Paso 1: Clonar e Instalar Dependencias
 
@@ -53,14 +48,7 @@ El servidor frontend se ejecutará en `http://localhost:5173`
 
 Abre tu navegador y ve a `http://localhost:5173`
 
-### Paso 5: Crear una Cuenta
-
-1. Haz clic en "Login" en la navbar
-2. Haz clic en "Regístrate aquí"
-3. Completa el formulario de registro
-4. Una vez registrado, serás redirigido a la página de datasets
-
-## 🎯 Funcionalidades Principales
+## Funcionalidades Principales
 
 ### Autenticación
 - Registro de nuevos usuarios
@@ -88,46 +76,8 @@ Abre tu navegador y ve a `http://localhost:5173`
 - Rate limiting en el backend
 - Validación de datos en frontend y backend
 
-## 📁 Estructura del Proyecto
 
-```
-├── backend/
-│   ├── src/
-│   │   ├── index.ts              # Servidor principal
-│   │   ├── routes/
-│   │   │   ├── auth.ts           # Endpoints de autenticación
-│   │   │   └── datasets.ts       # Endpoints de datasets
-│   │   ├── middleware/
-│   │   │   ├── errorHandler.ts   # Manejo de errores
-│   │   │   └── rateLimit.ts      # Rate limiting
-│   │   └── types.ts              # Tipos TypeScript
-│   ├── package.json
-│   └── tsconfig.json
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.tsx        # Barra de navegación
-│   │   │   ├── Footer.tsx        # Pie de página
-│   │   │   └── Slider.tsx        # Carousel principal
-│   │   ├── routes/
-│   │   │   ├── Home.tsx          # Página principal
-│   │   │   ├── Login.tsx         # Página de login
-│   │   │   ├── Register.tsx      # Página de registro
-│   │   │   ├── Datasets.tsx      # Lista de datasets
-│   │   │   └── DatasetNew.tsx    # Crear nuevo dataset
-│   │   ├── services/
-│   │   │   └── api.ts            # Cliente API con manejo de errores
-│   │   ├── styles/
-│   │   │   └── global.css        # Estilos globales
-│   │   ├── App.tsx               # Componente principal
-│   │   └── main.tsx              # Punto de entrada
-│   ├── index.html                # HTML principal con Bootstrap CDN
-│   ├── package.json
-│   └── vite.config.ts
-└── README.md
-```
-
-## 🔧 Scripts Disponibles
+## Scripts Disponibles
 
 ### Backend
 - `npm run dev`: Ejecuta el servidor en modo desarrollo con nodemon
@@ -139,7 +89,7 @@ Abre tu navegador y ve a `http://localhost:5173`
 - `npm run build`: Compila la aplicación para producción
 - `npm run preview`: Previsualiza la build de producción
 
-## 🌐 Endpoints de la API
+## Endpoints de la API
 
 ### Autenticación
 - `POST /auth/register` - Registrar nuevo usuario
@@ -151,42 +101,3 @@ Abre tu navegador y ve a `http://localhost:5173`
 
 ### Utilidades
 - `GET /health` - Health check del servidor
-
-## 🔒 Seguridad
-
-- Rate limiting: 5 requests por 15 minutos para auth, 100 para general
-- Validación de tokens en rutas protegidas
-- CORS configurado para el frontend
-- Validación de tipos en frontend y backend
-- Sanitización básica de inputs
-
-## 🎨 Tecnologías Utilizadas
-
-- **Frontend**: React 18, TypeScript, Vite, React Router
-- **Backend**: Node.js, Express, TypeScript
-- **UI**: Bootstrap 5, Bootstrap Icons
-- **Herramientas**: ESLint, Prettier (configurables)
-
-## 📝 Notas de Desarrollo
-
-- Los datos se almacenan en memoria (se pierden al reiniciar el servidor)
-- Los tokens son dummy (no son JWT reales)
-- La subida de archivos CSV solo valida metadata (no se almacena el archivo)
-- El proyecto está optimizado para desarrollo y demostración
-
-## 🚀 Próximos Pasos
-
-Para convertir esto en una aplicación de producción, considera:
-
-1. Implementar una base de datos real (PostgreSQL, MongoDB)
-2. Usar JWT reales para autenticación
-3. Implementar subida real de archivos (AWS S3, etc.)
-4. Añadir tests unitarios y de integración
-5. Implementar CI/CD
-6. Añadir logging y monitoreo
-7. Implementar cache (Redis)
-8. Añadir documentación de API (Swagger)
-
----
-
-¡Disfruta explorando la plataforma de Data Science! 🎉
